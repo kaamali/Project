@@ -1,0 +1,60 @@
+/* 
+Name :kaamali
+College name: vivekanandha college of engineering for women*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class WeatherApp {
+private:
+    string email;
+    string location;
+/*
+In this program I have used
+Structutes
+Switch case
+Access specifiers
+*/
+public:
+    void setEmail(string input_email) {
+        email = input_email;
+    }
+
+    void setLocation(string input_location) {
+        location = input_location;
+    }
+
+    void checkWeather() {
+        switch(location[0]) {
+            case '1':
+                cout << "It's currently cold " << location << endl;
+                break;
+            case '2':
+                cout << "It's currently warm " << location << endl;
+                break;
+            case '3':
+                cout <<" It's currently rainy " <<location<<endl;
+            default:
+                cout << "Sorry for the inconvince whether is not detected"<<location << endl;
+        }
+    }
+};
+
+int main() {
+    string email_input, location_input;
+    WeatherApp app;
+
+    cout<<"whether report\n";
+    cout << "Enter your email: ";
+    cin >> email_input;
+    app.setEmail(email_input);
+
+    cout << "Enter your location: ";
+    cin >> location_input;
+    app.setLocation(location_input);
+
+    app.checkWeather();
+
+    return 0;
+}
